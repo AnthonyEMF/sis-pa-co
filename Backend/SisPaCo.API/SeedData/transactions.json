@@ -1,0 +1,22 @@
+[
+  {
+    "id": "31f6eabb-3b47-41d1-9e5c-5fc5d9e8ed5c",
+    "number": 1,
+    "userId": "2a373bd7-1829-4bb4-abb7-19da4257891d",
+    "date": "2024-11-01T10:00:00Z",
+    "description": "Ingreso de efectivo",
+    "isActive": true,
+    "totalDebit": 1000.00,
+    "totalCredit": 1000.00
+  },
+  {
+    "id": "4b4eeb59-1f48-4f32-9d1e-bf5b6e4c8f36",
+    "number": 2,
+    "userId": "2a373bd7-1829-4bb4-abb7-19da4257891d",
+    "date": "2024-11-02T12:00:00Z",
+    "description": "Pago a proveedores",
+    "isActive": true,
+    "totalDebit": 500.00,
+    "totalCredit": 500.00
+  }
+]

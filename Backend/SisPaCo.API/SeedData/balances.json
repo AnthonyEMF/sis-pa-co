@@ -1,0 +1,93 @@
+[
+  {
+    "id": "1120241",
+    "month": 11,
+    "year": 2024,
+    "accountId": "1c0b4e57-57da-4d62-8be3-e2c83430a145",
+    "balanceAmount": 1500.00
+  },
+  {
+    "id": "112024101",
+    "month": 11,
+    "year": 2024,
+    "accountId": "a1e2b947-d9b5-4290-8b6d-bae6d8c1fefd",
+    "balanceAmount": 1500.00
+  },
+  {
+    "id": "11202410101",
+    "month": 11,
+    "year": 2024,
+    "accountId": "b289f451-6a36-4416-b0b9-6b70c6c9885f",
+    "balanceAmount": 1000.00
+  },
+  {
+    "id": "11202410102",
+    "month": 11,
+    "year": 2024,
+    "accountId": "c1df36e7-d57c-4e2e-9bbd-8b4379f12bdc",
+    "balanceAmount": 500.00
+  },
+  {
+    "id": "112024102",
+    "month": 11,
+    "year": 2024,
+    "accountId": "d0afcd5b-8b9d-41b4-8394-2c5a0a7f7ea5",
+    "balanceAmount": 0.00
+  },
+  {
+    "id": "1120242",
+    "month": 11,
+    "year": 2024,
+    "accountId": "df63fa1f-9e9b-4d0f-b0b7-654f2a688a95",
+    "balanceAmount": 500.00
+  },
+  {
+    "id": "112024201",
+    "month": 11,
+    "year": 2024,
+    "accountId": "eb573e5c-5a63-486e-b72d-9bb53a31aab5",
+    "balanceAmount": 500.00
+  },
+  {
+    "id": "11202420101",
+    "month": 11,
+    "year": 2024,
+    "accountId": "f63af6e9-dbe8-4a82-9097-e7b58fd209e5",
+    "balanceAmount": 500.00
+  },
+  {
+    "id": "1120243",
+    "month": 11,
+    "year": 2024,
+    "accountId": "1a46fb25-7b3d-4dd6-85d9-06a5e37b1c33",
+    "balanceAmount": 1000.00
+  },
+  {
+    "id": "112024301",
+    "month": 11,
+    "year": 2024,
+    "accountId": "2b93f22b-11a1-4a1b-8fb1-cdf79f9a5e72",
+    "balanceAmount": 1000.00
+  },
+  {
+    "id": "112024302",
+    "month": 11,
+    "year": 2024,
+    "accountId": "3cfb1f82-d6ec-4b9e-b97f-9d8f3ef2c76e",
+    "balanceAmount": 0.00
+  },
+  {
+    "id": "1120244",
+    "month": 11,
+    "year": 2024,
+    "accountId": "4a51f5ed-07a8-4f21-bff8-f7eb24f4a03c",
+    "balanceAmount": 0.00
+  },
+  {
+    "id": "1120245",
+    "month": 11,
+    "year": 2024,
+    "accountId": "5d64f7e2-1a4d-4f82-8d58-0bc68f6b5f89",
+    "balanceAmount": 0.00
+  }
+]

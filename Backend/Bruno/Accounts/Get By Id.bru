@@ -1,0 +1,15 @@
+meta {
+  name: Get By Id
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{PATH}}/accounts/c1df36e7-d57c-4e2e-9bbd-8b4379f12bdc
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}

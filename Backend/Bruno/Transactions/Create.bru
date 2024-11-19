@@ -1,0 +1,34 @@
+meta {
+  name: Create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{PATH}}/transactions
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+body:json {
+  {
+    "userId": "2a373bd7-1829-4bb4-abb7-19da4257891d",
+    "description": "Ingresos de prueba",
+    "entries": [
+      {
+        "accountId": "B289F451-6A36-4416-B0B9-6B70C6C9885F",
+        "amount": 300,
+        "type": "DÉBITO"
+      },
+      {
+        "accountId": "4A51F5ED-07A8-4F21-BFF8-F7EB24F4A03C",
+        "amount": 300,
+        "type": "CRÉDITO"
+      }
+    ]
+  }
+}

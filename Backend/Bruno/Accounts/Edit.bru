@@ -1,0 +1,21 @@
+meta {
+  name: Edit
+  type: http
+  seq: 1
+}
+
+put {
+  url: {{PATH}}/accounts/B289F451-6A36-4416-B0B9-6B70C6C9885F
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+body:json {
+  {
+    "isActive": false
+  }
+}

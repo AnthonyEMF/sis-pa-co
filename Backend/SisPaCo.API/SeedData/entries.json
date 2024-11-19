@@ -1,0 +1,30 @@
+[
+  {
+    "id": "9bf6e2ab-37d8-4b1e-b5e2-fd5d6e9c8d5b",
+    "transactionId": "31f6eabb-3b47-41d1-9e5c-5fc5d9e8ed5c",
+    "accountId": "b289f451-6a36-4416-b0b9-6b70c6c9885f",
+    "amount": 1000.00,
+    "type": "DÉBITO"
+  },
+  {
+    "id": "23a8e2bb-47c1-4d1f-9e2e-a1c6e8c1d1f4",
+    "transactionId": "31f6eabb-3b47-41d1-9e5c-5fc5d9e8ed5c",
+    "accountId": "2b93f22b-11a1-4a1b-8fb1-cdf79f9a5e72",
+    "amount": 1000.00,
+    "type": "CRÉDITO"
+  },
+  {
+    "id": "5ac3f4ab-27b2-42d6-9b2e-0bd5e1f6d7c6",
+    "transactionId": "4b4eeb59-1f48-4f32-9d1e-bf5b6e4c8f36",
+    "accountId": "c1df36e7-d57c-4e2e-9bbd-8b4379f12bdc",
+    "amount": 500.00,
+    "type": "DÉBITO"
+  },
+  {
+    "id": "6b5ec4db-2b41-4d8e-91c8-3fd9d8e7e2a5",
+    "transactionId": "4b4eeb59-1f48-4f32-9d1e-bf5b6e4c8f36",
+    "accountId": "f63af6e9-dbe8-4a82-9097-e7b58fd209e5",
+    "amount": 500.00,
+    "type": "CRÉDITO"
+  }
+]

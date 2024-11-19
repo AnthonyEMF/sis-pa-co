@@ -1,0 +1,20 @@
+meta {
+  name: Pagination List
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{PATH}}/balances?searchTerm&page=4
+  body: none
+  auth: bearer
+}
+
+params:query {
+  searchTerm: 
+  page: 4
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}

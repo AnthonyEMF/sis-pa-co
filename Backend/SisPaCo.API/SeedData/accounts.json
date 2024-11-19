@@ -1,0 +1,106 @@
+[
+  {
+    "id": "1c0b4e57-57da-4d62-8be3-e2c83430a145",
+    "code": "1",
+    "name": "Activos",
+    "allowMovement": false,
+    "parentId": null,
+    "isActive": true
+  },
+  {
+    "id": "a1e2b947-d9b5-4290-8b6d-bae6d8c1fefd",
+    "code": "101",
+    "name": "Disponibilidades",
+    "allowMovement": false,
+    "parentId": "1c0b4e57-57da-4d62-8be3-e2c83430a145",
+    "isActive": true
+  },
+  {
+    "id": "b289f451-6a36-4416-b0b9-6b70c6c9885f",
+    "code": "10101",
+    "name": "Caja chica",
+    "allowMovement": true,
+    "parentId": "a1e2b947-d9b5-4290-8b6d-bae6d8c1fefd",
+    "isActive": true
+  },
+  {
+    "id": "c1df36e7-d57c-4e2e-9bbd-8b4379f12bdc",
+    "code": "10102",
+    "name": "Caja general",
+    "allowMovement": true,
+    "parentId": "a1e2b947-d9b5-4290-8b6d-bae6d8c1fefd",
+    "isActive": true
+  },
+  {
+    "id": "d0afcd5b-8b9d-41b4-8394-2c5a0a7f7ea5",
+    "code": "102",
+    "name": "Cuentas por cobrar",
+    "allowMovement": true,
+    "parentId": "1c0b4e57-57da-4d62-8be3-e2c83430a145",
+    "isActive": true
+  },
+  {
+    "id": "df63fa1f-9e9b-4d0f-b0b7-654f2a688a95",
+    "code": "2",
+    "name": "Pasivos",
+    "allowMovement": false,
+    "parentId": null,
+    "isActive": true
+  },
+  {
+    "id": "eb573e5c-5a63-486e-b72d-9bb53a31aab5",
+    "code": "201",
+    "name": "Cuentas por Pagar",
+    "allowMovement": false,
+    "parentId": "df63fa1f-9e9b-4d0f-b0b7-654f2a688a95",
+    "isActive": true
+  },
+  {
+    "id": "f63af6e9-dbe8-4a82-9097-e7b58fd209e5",
+    "code": "20101",
+    "name": "Otras cuentas por pagar",
+    "allowMovement": true,
+    "parentId": "eb573e5c-5a63-486e-b72d-9bb53a31aab5",
+    "isActive": true
+  },
+  {
+    "id": "1a46fb25-7b3d-4dd6-85d9-06a5e37b1c33",
+    "code": "3",
+    "name": "Patrimonio",
+    "allowMovement": false,
+    "parentId": null,
+    "isActive": true
+  },
+  {
+    "id": "2b93f22b-11a1-4a1b-8fb1-cdf79f9a5e72",
+    "code": "301",
+    "name": "Aportaciones",
+    "allowMovement": true,
+    "parentId": "1a46fb25-7b3d-4dd6-85d9-06a5e37b1c33",
+    "isActive": true
+  },
+  {
+    "id": "3cfb1f82-d6ec-4b9e-b97f-9d8f3ef2c76e",
+    "code": "302",
+    "name": "Excedentes o Pérdidas",
+    "allowMovement": true,
+    "parentId": "1a46fb25-7b3d-4dd6-85d9-06a5e37b1c33",
+    "isActive": true
+  },
+  {
+    "id": "4a51f5ed-07a8-4f21-bff8-f7eb24f4a03c",
+    "code": "4",
+    "name": "Ingresos",
+    "allowMovement": true,
+    "parentId": null,
+    "isActive": true
+  },
+  {
+    "id": "5d64f7e2-1a4d-4f82-8d58-0bc68f6b5f89",
+    "code": "5",
+    "name": "Gastos",
+    "allowMovement": true,
+    "parentId": null,
+    "isActive": true
+  }
+]

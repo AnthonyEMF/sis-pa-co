@@ -1,0 +1,15 @@
+meta {
+  name: Get By Id
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{PATH}}/transactions/09dd7e08-93d4-44ac-95d9-24f5ac241d74
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
