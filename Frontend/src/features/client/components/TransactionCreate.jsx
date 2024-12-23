@@ -85,9 +85,10 @@ export const TransactionCreate = () => {
       })),
     };
 
-    createTransaction(transactionData);
+    createTransaction(transactionData); // Falta await
     alert("Partida registrada con éxito, se han actualizado los saldos.");
-    navigate("/balances");
+    navigate(`/transactions`);
+    //navigate(`/transactions-details/${newTransaction.data.id}`);
   };
 
   return (

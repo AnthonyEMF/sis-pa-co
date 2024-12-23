@@ -55,8 +55,10 @@
 ## Estado del Proyecto
 
 Actualmente en desarrollo.  
+Crear nuevos balances de cuentas existentes para nuevos meses.  
+Implementación de formik y zustand.  
 Se están mejorando funcionalidades como proporcionar datos más detallados en los registros.  
-Evitar que se cierre la sesión cuando se actualiza la página.  
+Poder eliminar cuentas desactivadas.  
 Agregar la posibilidad de editar el nombre de las cuentas.
 
 ## Autores

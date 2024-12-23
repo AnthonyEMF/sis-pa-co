@@ -43,9 +43,9 @@ namespace ExamenLenguajes2.API.Database
 					var firstUser = new UserEntity
 					{
 						Id = "2a373bd7-1829-4bb4-abb7-19da4257891d",
-						Email = "jperez@example.com",
-						UserName = "jperez@example.com",
-						FullName = "Juan Peréz",
+						Email = "user1@me.com",
+						UserName = "user1@me.com",
+						FullName = "Primer Usuario",
 					};
 
 					await userManager.CreateAsync(firstUser, "Temporal01*");
@@ -54,9 +54,9 @@ namespace ExamenLenguajes2.API.Database
 					var secondUser = new UserEntity
 					{
 						Id = "ac42ed74-9880-403e-b26a-4cc81122992c",
-						Email = "msanchez@example.com",
-						UserName = "msanchez@example.com",
-						FullName = "María Sanchez",
+						Email = "user2@me.com",
+						UserName = "user2@me.com",
+						FullName = "Segundo Usuario",
 					};
 
 					await userManager.CreateAsync(secondUser, "Temporal01*");

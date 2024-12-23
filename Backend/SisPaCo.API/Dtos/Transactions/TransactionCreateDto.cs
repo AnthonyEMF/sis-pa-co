@@ -5,7 +5,6 @@ namespace ExamenLenguajes2.API.Dtos.Transactions
 {
 	public class TransactionCreateDto
 	{
-		[Required(ErrorMessage = "El Id del usuario es requerido.")]
 		public string UserId { get; set; }
 
 		[Required(ErrorMessage = "La descripción de la partida es requerida.")]

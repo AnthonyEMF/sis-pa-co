@@ -7,6 +7,7 @@ using ExamenLenguajes2.API.Dtos.Transactions;
 using ExamenLenguajes2.API.Services.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Principal;
 
 namespace ExamenLenguajes2.API.Services
 {
@@ -14,6 +15,7 @@ namespace ExamenLenguajes2.API.Services
 	{
 		private readonly SisPaCoContext _context;
 		private readonly UserManager<UserEntity> _userManager;
+		private readonly IAuditService _auditService;
 		private readonly ILogsService _logsService;
 		private readonly IMapper _mapper;
 		private readonly ILogger<TransactionsService> _logger;
@@ -22,6 +24,7 @@ namespace ExamenLenguajes2.API.Services
 		public TransactionsService(
 			SisPaCoContext context,
 			UserManager<UserEntity> userManager,
+			IAuditService auditService,
 			ILogsService logsService,
 			IMapper mapper,
 			ILogger<TransactionsService> logger,
@@ -29,13 +32,14 @@ namespace ExamenLenguajes2.API.Services
         {
 			this._context = context;
 			this._userManager = userManager;
+			this._auditService = auditService;
 			this._logsService = logsService;
 			this._mapper = mapper;
 			this._logger = logger;
 			PAGE_SIZE = configuration.GetValue<int>("PageSize");
 		}
 
-        public async Task<ResponseDto<PaginationDto<List<TransactionDto>>>> GetAllTransactionsAsync(string searchTerm = "", int page = 1)
+		public async Task<ResponseDto<PaginationDto<List<TransactionDto>>>> GetAllTransactionsAsync(string searchTerm = "", int page = 1)
 		{
 			int startIndex = (page - 1) * PAGE_SIZE;
 			var transactionsEntityQuery = _context.Transactions
@@ -111,6 +115,9 @@ namespace ExamenLenguajes2.API.Services
 			{
 				try
 				{
+					// Obtener id del usuario en sesión
+					//dto.UserId = _auditService.GetUserId();
+
 					var user = await _userManager.Users.FirstOrDefaultAsync(u => u.Id == dto.UserId);
 					if (user == null) // Validar que el usuario existe
 					{
@@ -214,10 +221,7 @@ namespace ExamenLenguajes2.API.Services
 					foreach (var entry in transactionEntity.Entries)
 					{
 						// Obtener el saldo relacionado a partir del Mes, Año y id de la cuenta
-						var balance = await _context.Balances.FirstOrDefaultAsync(b =>
-							b.AccountId == entry.AccountId &&
-							b.Month == transactionEntity.Date.Month &&
-							b.Year == transactionEntity.Date.Year);
+						var balance = await _context.Balances.FirstOrDefaultAsync(b => b.AccountId == entry.AccountId);
 
 						// Actualizar el saldo segun el tipo de la entrada
 						if (entry.Type == "CRÉDITO")
@@ -326,9 +330,7 @@ namespace ExamenLenguajes2.API.Services
 						{
 							var account = await _context.Accounts.FindAsync(entry.AccountId);
 							var balance = await _context.Balances.FirstOrDefaultAsync(b =>
-								b.AccountId == entry.AccountId &&
-								b.Month == transactionEntity.Date.Month &&
-								b.Year == transactionEntity.Date.Year);
+								b.AccountId == entry.AccountId);
 
 							if (balance != null)
 							{
@@ -389,23 +391,7 @@ namespace ExamenLenguajes2.API.Services
 				return;
 			}
 
-			var parentBalance = await _context.Balances.FirstOrDefaultAsync(b =>
-				b.AccountId == parentId &&
-				b.Month == DateTime.Now.Month &&
-				b.Year == DateTime.Now.Year);
-
-			if (parentBalance == null) // Si no existe el saldo de la cuenta padre, lo creamos
-			{
-				parentBalance = new BalanceEntity
-				{
-					Id = $"{parentAccount.Id}{DateTime.Now.Month}{DateTime.Now.Year}",
-					Month = DateTime.Now.Month,
-					Year = DateTime.Now.Year,
-					AccountId = parentAccount.Id,
-					BalanceAmount = 0
-				};
-				_context.Balances.Add(parentBalance);
-			}
+			var parentBalance = await _context.Balances.FirstOrDefaultAsync(b => b.AccountId == parentId);
 
 			// Actualizamos el saldo del balance del padre
 			if (entryType == "CRÉDITO")

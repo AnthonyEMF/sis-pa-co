@@ -2,7 +2,7 @@ export const HomePage = () => {
   return (
     <div className="flex flex-col items-center content-center w-full">
       <div className="max-w-5xl w-full p-6">
-        <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">Sis-Pa-Co</h1>
+        <h1 className="text-3xl font-bold text-center text-gray-800 mb-2">Sis-Pa-Co</h1>
         <p className="text-xl text-center mb-2">Sistema de Partidas Contables</p>
         <p className="text-base text-center mb-0"><span className="font-semibold">Desarrollado por:</span> Anthony Miranda & Danilo Vides</p>
         <div className="grid grid-cols-1 mt-10 md:grid-cols-2 gap-6">
